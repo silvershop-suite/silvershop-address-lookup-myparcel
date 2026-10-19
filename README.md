@@ -1,6 +1,6 @@
-# silvershop/address-lookup-myparcel
+# silvershop-suite/address-lookup-myparcel
 
-A **satellite provider** for [`silvershop/address-lookup`](https://github.com/silvershop/silvershop-address-lookup)
+A **satellite provider** for [`silvershop-suite/address-lookup`](https://github.com/silvershop/silvershop-address-lookup)
 (CMS 6) that resolves addresses through the **[MyParcel Address API](https://address.api.myparcel.nl)**.
 
 It registers one provider (`myparcel`) in the base module's per-country registry and — out of the box — **closes the
@@ -24,7 +24,7 @@ form. MyParcel resolves Belgium, so this module routes `BE → myparcel`.
 ## Installation
 
 ```bash
-composer require silvershop/address-lookup-myparcel
+composer require silvershop-suite/address-lookup-myparcel
 ```
 
 Then run `dev/build?flush=all`.
@@ -32,7 +32,7 @@ Then run `dev/build?flush=all`.
 ### API key
 
 The provider authenticates with `Authorization: basic base64(key)` and reads the key from the environment variable
-**`SS_MYPARCEL_API_KEY`** — the **same key** [`silvershop/shipping-myparcel`](https://github.com/silvershop) already
+**`SS_MYPARCEL_API_KEY`** — the **same key** [`silvershop-suite/shipping-myparcel`](https://github.com/silvershop) already
 uses. A shop that already ships with MyParcel needs **no extra configuration**: add the module, flush, done. (This
 module does not depend on shipping-myparcel's code — only on the shared key.)
 
@@ -96,7 +96,7 @@ empty answer on any miss or fault, so a slow or failing address API never blocks
 - PHP ^8.3
 - silverstripe/framework ^6
 - silvershop/core ^6
-- silvershop/address-lookup ^1
+- silvershop-suite/address-lookup ^1
 - A MyParcel API key (`SS_MYPARCEL_API_KEY`)
 
 ## License

@@ -1,6 +1,6 @@
 {
-    "name": "silvershop/address-lookup-myparcel",
-    "description": "MyParcel Address API provider for silvershop/address-lookup (CMS 6): a satellite connector that resolves NL addresses structurally (postcode + house number -> street + city + lat/lng) and BE + other countries via free-text autocomplete, plus address validation. Reuses the SS_MYPARCEL_API_KEY that silvershop/shipping-myparcel already uses. Registers the `myparcel` provider and maps BE -> myparcel, closing the base module's Belgium gap.",
+    "name": "silvershop-suite/address-lookup-myparcel",
+    "description": "MyParcel Address API provider for silvershop-suite/address-lookup (CMS 6): a satellite connector that resolves NL addresses structurally (postcode + house number -> street + city + lat/lng) and BE + other countries via free-text autocomplete, plus address validation. Reuses the SS_MYPARCEL_API_KEY that silvershop-suite/shipping-myparcel already uses. Registers the `myparcel` provider and maps BE -> myparcel, closing the base module's Belgium gap.",
     "type": "silverstripe-vendormodule",
     "license": "BSD-3-Clause",
     "keywords": ["silverstripe", "silvershop", "address", "autocomplete", "postcode", "checkout", "myparcel", "belgium", "validation"],
@@ -13,7 +13,7 @@
         "php": "^8.3",
         "silverstripe/framework": "^6.0",
         "silvershop/core": "^6",
-        "silvershop/address-lookup": "^1"
+        "silvershop-suite/address-lookup": "^1"
     },
     "require-dev": {
         "cambis/silverstan": "^2.1",
@@ -22,7 +22,7 @@
         "squizlabs/php_codesniffer": "^3.0"
     },
     "suggest": {
-        "silvershop/shipping-myparcel": "Shares the SS_MYPARCEL_API_KEY: a shop that already ships with MyParcel needs no extra key for address lookup."
+        "silvershop-suite/shipping-myparcel": "Shares the SS_MYPARCEL_API_KEY: a shop that already ships with MyParcel needs no extra key for address lookup."
     },
     "scripts": {
         "test": "vendor/bin/phpunit",

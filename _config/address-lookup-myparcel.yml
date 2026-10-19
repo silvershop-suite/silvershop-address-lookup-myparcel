@@ -1,0 +1,18 @@
+---
+Name: silvershop-address-lookup-myparcel
+After:
+  - '#silvershop-address-lookup'
+---
+SilverShop\AddressLookup\Provider\AddressLookupProviderRegistry:
+  # Register the paid MyParcel provider alongside the base's free providers.
+  providers:
+    myparcel: '%$SilverShop\AddressLookup\MyParcel\MyParcelAddressProvider'
+  # Close the Belgium gap: the base maps BE -> pdok, but PDOK is NL-only, so BE fell back to the manual form. MyParcel
+  # resolves BE (free-text autocomplete), so route BE here.
+  #
+  # NL is deliberately LEFT on the free government PDOK provider. To use MyParcel for NL instead, add to your project:
+  #   SilverShop\AddressLookup\Provider\AddressLookupProviderRegistry:
+  #     by_country:
+  #       NL: myparcel
+  by_country:
+    BE: myparcel

@@ -1,0 +1,59 @@
+{
+    "name": "silvershop/address-lookup-myparcel",
+    "description": "MyParcel Address API provider for silvershop/address-lookup (CMS 6): a satellite connector that resolves NL addresses structurally (postcode + house number -> street + city + lat/lng) and BE + other countries via free-text autocomplete, plus address validation. Reuses the SS_MYPARCEL_API_KEY that silvershop/shipping-myparcel already uses. Registers the `myparcel` provider and maps BE -> myparcel, closing the base module's Belgium gap.",
+    "type": "silverstripe-vendormodule",
+    "license": "BSD-3-Clause",
+    "keywords": ["silverstripe", "silvershop", "address", "autocomplete", "postcode", "checkout", "myparcel", "belgium", "validation"],
+    "authors": [
+        {
+            "name": "RVXD"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "silverstripe/framework": "^6.0",
+        "silvershop/core": "^6",
+        "silvershop/address-lookup": "^1"
+    },
+    "require-dev": {
+        "cambis/silverstan": "^2.1",
+        "silverstripe/recipe-testing": "^4",
+        "silverstripe/sqlite3": "^4",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "suggest": {
+        "silvershop/shipping-myparcel": "Shares the SS_MYPARCEL_API_KEY: a shop that already ships with MyParcel needs no extra key for address lookup."
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "stan": "vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit=-1",
+        "lint": "vendor/bin/phpcs",
+        "lint:fix": "vendor/bin/phpcbf"
+    },
+    "autoload": {
+        "psr-4": {
+            "SilverShop\\AddressLookup\\MyParcel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SilverShop\\AddressLookup\\MyParcel\\Tests\\": "tests/php/"
+        }
+    },
+    "extra": {
+        "expose": [],
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/recipe-plugin": true,
+            "silverstripe/vendor-plugin": true,
+            "php-http/discovery": false
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

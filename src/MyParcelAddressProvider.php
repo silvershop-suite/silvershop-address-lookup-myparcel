@@ -14,7 +14,7 @@ use SilverStripe\Core\Environment;
 /**
  * MyParcel Address API provider — the paid satellite for {@see \SilverShop\AddressLookup\Provider\AddressLookupProvider}.
  * Host https://address.api.myparcel.nl, authenticated with `Authorization: basic base64(key)` using the SAME key
- * silvershop/shipping-myparcel already reads from the environment as `SS_MYPARCEL_API_KEY` (configurable via
+ * silvershop-suite/shipping-myparcel already reads from the environment as `SS_MYPARCEL_API_KEY` (configurable via
  * {@see self::$api_key_env}); this module does NOT depend on shipping-myparcel's code, only on the shared key.
  *
  * Capabilities, exactly as the API honours them (verified against the OpenAPI spec and the live API):

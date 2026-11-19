@@ -1,6 +1,6 @@
 # silvershop-suite/address-lookup-myparcel
 
-A **satellite provider** for [`silvershop-suite/address-lookup`](https://github.com/silvershop/silvershop-address-lookup)
+A **satellite provider** for [`silvershop-suite/address-lookup`](https://github.com/silvershop-suite/silvershop-address-lookup)
 (CMS 6) that resolves addresses through the **[MyParcel Address API](https://address.api.myparcel.nl)**.
 
 It registers one provider (`myparcel`) in the base module's per-country registry and — out of the box — **closes the
